@@ -1,0 +1,26 @@
+{
+  "name": "pyspark-ai",
+  "build": { "dockerfile": "Dockerfile" },
+  "remoteUser": "root",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "github.copilot-chat",
+        "ms-python.python",
+        "ms-toolsai.jupyter"
+      ],
+      "settings": {
+        "chat.tools.autoApprove": true,
+				"chat.tools.terminal.autoApprove": { "/.*/": true },
+        "chat.tools.terminal.ignoreDefaultAutoApproveRules": true,
+        "chat.tools.edits.autoApprove": {
+          "**/*": true,
+          "**/.git/**": false
+        },
+        "chat.agent.maxRequests": 100,
+        "python.defaultInterpreterPath": "/usr/bin/python3",
+        "python.selectInterpreter": "/usr/bin/python3"
+      }
+    }
+  }
+}
